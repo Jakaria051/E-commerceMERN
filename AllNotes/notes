@@ -1,0 +1,2 @@
+## To remove git repository
+===>>> rm -rf .git
