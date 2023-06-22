@@ -1,2 +1,5 @@
 ## To remove git repository
 ===>>> rm -rf .git
+
+## To remove the bootstrap reload 
+===>>> npm i react-router-bootstrap
