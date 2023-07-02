@@ -31,11 +31,12 @@ import AdminOrdersPage from "./pages/admin/AdminOrdersPage";
 import AdminOrderDetailsPage from "./pages/admin/AdminOrderDetailsPage";
 import AdminAnalyticsPage from "./pages/admin/AdminAnalyticsPage";
 import AdminChatPage from "./pages/admin/AdminChatPage";
-
+import ScrollToTop from "./utils/ScrollToTop";
 function App() {
   return (
     <>
       {" "}
+      <ScrollToTop />
       <HeaderComponent />
       <Routes>
         {/* ROUTE for ChatComponent */}
@@ -44,7 +45,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/product-list" element={<ProductListPage />} />
           <Route path="/product-details/:id" element={<ProductDetailsPage />} />
-
+          <Route path="/product-details" element={<ProductDetailsPage />} />
           <Route path="/cart" element={<CartPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
