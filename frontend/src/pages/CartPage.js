@@ -12,7 +12,7 @@ const CartPage = () => {
             <ListGroup>
               {Array.from({ length: 3 }).map((item, idx) => (
                 <>
-                  <CartItemComponent key={idx} />
+                  <CartItemComponent key={idx+1} />
                 </>
               ))}
             </ListGroup>
@@ -29,7 +29,7 @@ const CartPage = () => {
               Price : <span className="fw-bold">$892</span>
             </ListGroup.Item>
             <ListGroup.Item>
-              <LinkContainer to="/user/order-details">
+              <LinkContainer to="/user/cart-details">
                 <Button type="button">Proceed to checkout</Button>
               </LinkContainer>
             </ListGroup.Item>

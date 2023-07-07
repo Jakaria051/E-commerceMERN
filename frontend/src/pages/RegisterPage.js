@@ -2,9 +2,18 @@ import { Container, Row, Col, Form, Button, Alert } from "react-bootstrap";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Spinner from 'react-bootstrap/Spinner'
-
 const RegisterPage = () => {
   const [validated, setValidated] = useState(false);
+
+  const onChange = () => {
+      const password = document.querySelector("input[name=password]")
+      const confirm = document.querySelector("input[name=confirmPassword]")
+      if(confirm.value === password.value) {
+          confirm.setCustomValidity("")
+      } else {
+          confirm.setCustomValidity("Passwords do not match")
+      }
+  }
 
   const handleSubmit = (event) => {
     const form = event.currentTarget;
@@ -15,8 +24,6 @@ const RegisterPage = () => {
 
     setValidated(true);
   };
-
- 
   return (
     <Container>
       <Row className="mt-5 justify-content-md-center">
@@ -67,6 +74,7 @@ const RegisterPage = () => {
                 type="password"
                 placeholder="Password"
                 minLength={6}
+                onChange={onChange}
               />
               <Form.Control.Feedback type="invalid">
                 Please anter a valid password
@@ -83,6 +91,7 @@ const RegisterPage = () => {
                 type="password"
                 placeholder="Repeat Password"
                 minLength={6}
+                onChange={onChange}
               />
               <Form.Control.Feedback type="invalid">
                 Both passwords should match

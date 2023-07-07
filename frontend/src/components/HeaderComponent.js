@@ -42,17 +42,24 @@ const HeaderComponent = () => {
             <Nav>
             
             <LinkContainer to="/admin/orders">
-            <Nav.Link>
+              <Nav.Link>
                 Admin
                 <span className="position-absolute top-1 start-10 translate-middle p-2 bg-danger border border-light rounded-circle"></span>
               </Nav.Link>
             </LinkContainer>
-           
-            <NavDropdown title="Jakaria" id="collasible-nav-dropdown">
-              <NavDropdown.Item as={Link} eventKey="/user/my-orders">My orders</NavDropdown.Item>
-              <NavDropdown.Item as={Link} eventKey="/user">My Profile</NavDropdown.Item>
-              <NavDropdown.Item >Logout</NavDropdown.Item>
 
+            <NavDropdown title="John Doe" id="collasible-nav-dropdown">
+              <NavDropdown.Item
+                eventKey="/user/my-orders"
+                as={Link}
+                to="/user/my-orders"
+              >
+                My orders
+              </NavDropdown.Item>
+              <NavDropdown.Item eventKey="/user" as={Link} to="/user">
+                My profile
+              </NavDropdown.Item>
+              <NavDropdown.Item>Logout</NavDropdown.Item>
             </NavDropdown>
 
             <LinkContainer to="/login">
