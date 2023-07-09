@@ -174,11 +174,11 @@ import {
                 <Form.Label>Images</Form.Label>
                   <Row>
                       <Col style={{position: "relative"}} xs={3}>
-                      <Image src="/images/monitors-category.png" fluid />
+                      <Image src="/images/monitors-category.png" crossOrigin="anonymous" fluid />
                       <i style={onHover} className="bi bi-x text-danger"></i>
                       </Col>
                       <Col style={{position: "relative"}} xs={3}>
-                      <Image src="/images/monitors-category.png" fluid />
+                      <Image src="/images/monitors-category.png" crossOrigin="anonymous" fluid />
                       <i style={onHover} className="bi bi-x text-danger"></i>
                       </Col>
                       

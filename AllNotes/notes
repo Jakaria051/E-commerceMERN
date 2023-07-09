@@ -3,3 +3,12 @@
 
 ## To remove the bootstrap reload 
 ===>>> npm i react-router-bootstrap
+
+## To kill a existing port on running
+===> fuser -k 3000/tcp
+
+## frontend run
+===> npm start
+### backend run
+===> npx nodemon server.js
+
