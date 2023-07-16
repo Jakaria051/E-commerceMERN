@@ -8,6 +8,12 @@ app.get('/', (req, res) => {
     res.json({message: "API running..."})
 })
 
+
+// Mongodb connection
+const connectDB = require("./config/db");
+connectDB();
+
+
 app.use('/api', apiRoutes)
 
 // app.get('/api/products', (req,res) => {
